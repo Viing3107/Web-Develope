@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 27, 27);
+    overflow: hidden;
+}
+
+.container {
+    width: 50%;
+    height: 36vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: perspective(1000px) rotateY(-30deg) rotate(5deg) translateX(40%);
+    z-index: 2;
+}
+
+.container__sentence {
+    text-transform: uppercase;
+    font-family: 'Hogfish DEMO';
+    font-size: 3.5rem;
+    color: rgb(255, 158, 224);
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0 0 10px rgb(210, 43, 199), 0 0 20px rgb(216, 40, 178), 0 0 30px white, 0 0 40px white, 0 0 50px white;
+    position: absolute;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.music {
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    transform: perspective(500px) rotateY(10deg) rotate(-5deg);
+    z-index: 2;
+    filter: drop-shadow(20px 20px 5px black);
+}
+
+iframe {
+    position: relative;
+}
+
+.ngoi {
+    height: 500px;
+    z-index: 4;
+    position: absolute;
+    top: -15%;
+    left: 31%;
+    filter: drop-shadow(10px 20px 10px black);
+}
