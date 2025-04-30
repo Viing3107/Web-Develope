@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    position: relative;
+}
+
+:root {
+    --font-color: #bc0000;
+    --font-color-shadow: #480000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 150px;
+    margin-left: 150px;
+    transform: perspective(1000px) rotateY(20deg) rotate(1deg);
+}
+
+.container-sentence {
+    position: absolute;
+    font-size: 4rem;
+    font-family: "Hogfish DEMO", Jetbrains Mono;
+    background: linear-gradient(var(--font-color), white);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px rgb(122, 0, 0);
+}
+
+.image {
+    position: absolute;
+    top: calc(50vh - 400px);
+    left: calc(50vw);
+    height: 600px;
+    z-index: 2;
+    filter: drop-shadow(10px 5px black);
+}
+
+.music_player {
+    height: 300px;
+    border-radius: 15px;
+    margin-top: calc(100vh - 550px);
+    margin-right: 150px;
+    z-index: 1;
+}
+
+iframe {
+    position: absolute;
+    transform: perspective(800px) rotateX(60deg) rotate(5deg);
+    top: calc(50vh - 30px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
